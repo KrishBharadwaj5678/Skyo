@@ -71,13 +71,66 @@ export let WeatherContextProvider = ({ children }) => {
   };
 
   // Get Current Geopositon
+  // useEffect(() => {
+  //   if (!navigator.geolocation) {
+  //     toast.error("Geolocation is not supported by your browser");
+  //     return;
+  //   }
+  //   navigator.geolocation.getCurrentPosition((location) => {
+  //     setCoordinates({
+  //       lat: location.coords.latitude,
+  //       long: location.coords.longitude,
+  //     });
+  //   });
+  // }, []);
+
+  // Get Current Geoposition
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition((location) => {
-      setCoordinates({
-        lat: location.coords.latitude,
-        long: location.coords.longitude,
-      });
-    });
+    if (!navigator.geolocation) {
+      toast.error("Geolocation is not supported by your browser");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (location) => {
+        setCoordinates({
+          lat: location.coords.latitude,
+          long: location.coords.longitude,
+        });
+      },
+      (error) => {
+        console.log("Geolocation error:", error);
+
+        // Handle different error cases
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            toast.error(
+              "Location permission denied. Please enable location access or search for a city.",
+            );
+            break;
+          case error.POSITION_UNAVAILABLE:
+            toast.error(
+              "Location information unavailable. Please search for a city.",
+            );
+            break;
+          case error.TIMEOUT:
+            toast.error(
+              "Location request timed out. Please search for a city.",
+            );
+            break;
+          default:
+            toast.error("Unable to get location. Please search for a city.");
+        }
+
+        // Optionally set a default location (e.g., a major city)
+        // setCoordinates({ lat: 28.6139, long: 77.2090 }); // Delhi as example
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000, // 10 seconds timeout
+        maximumAge: 0,
+      },
+    );
   }, []);
 
   return (
