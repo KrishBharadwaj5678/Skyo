@@ -70,25 +70,11 @@ export let WeatherContextProvider = ({ children }) => {
     }
   };
 
-  // Get Current Geopositon
-  // useEffect(() => {
-  //   if (!navigator.geolocation) {
-  //     toast.error("Geolocation is not supported by your browser");
-  //     return;
-  //   }
-  //   navigator.geolocation.getCurrentPosition((location) => {
-  //     setCoordinates({
-  //       lat: location.coords.latitude,
-  //       long: location.coords.longitude,
-  //     });
-  //   });
-  // }, []);
-
   // Get Current Geoposition
   useEffect(() => {
     if (!navigator.geolocation) {
       toast.error("Geolocation is not supported by your browser");
-      setCoordinates({ lat: 28.6139, long: 77.209 });
+      setCoordinates({ lat: 28.6, long: 77.2 });
       return;
     }
 
@@ -102,7 +88,7 @@ export let WeatherContextProvider = ({ children }) => {
       (error) => {
         console.log("Geolocation error:", error);
         // Set default location on any error
-        setCoordinates({ lat: 28.6139, long: 77.209 }); // Delhi
+        setCoordinates({ lat: 28.6, long: 77.2 }); // Delhi
       },
       {
         enableHighAccuracy: true,

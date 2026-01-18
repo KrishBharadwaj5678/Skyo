@@ -6,7 +6,7 @@ const CurrentWeather = () => {
   let { weatherData } = useWeather();
 
   return (
-    <div className="backdrop-blur rounded-2xl lg:mt-14 mt-7 px-4 sm:px-7 md:px-9 my-9 pt-0 dark:text-white transition-colors duration-300">
+    <div className="backdrop-blur rounded-2xl lg:mt-14 mt-8 px-4 sm:px-7 md:px-9 my-9 pt-0 dark:text-white transition-colors duration-300">
       <div className="flex flex-row justify-between items-center ">
         {/* LEFT */}
         <div className="text-left flex-1">
