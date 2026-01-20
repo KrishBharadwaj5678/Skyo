@@ -74,7 +74,7 @@ export let WeatherContextProvider = ({ children }) => {
   useEffect(() => {
     if (!navigator.geolocation) {
       toast.error("Geolocation is not supported by your browser");
-      setCoordinates({ lat: 28.6, long: 77.2 });
+      setCoordinates({ lat: 28.6667, long: 77.2167 });
       return;
     }
 
@@ -88,7 +88,7 @@ export let WeatherContextProvider = ({ children }) => {
       (error) => {
         console.log("Geolocation error:", error);
         // Set default location on any error
-        setCoordinates({ lat: 28.6, long: 77.2 }); // Delhi
+        setCoordinates({ lat: 28.6667, long: 77.2167 }); // Delhi
       },
       {
         enableHighAccuracy: true,

@@ -1,0 +1,7 @@
+{
+  "name": "Skyo | Live Weather Forecast",
+  "description": "Skyo provides real-time weather updates, forecasts, temperature, humidity, and air conditions for your location.",
+  "requestFramePermissions": [
+    "location"
+  ]
+}
