@@ -1,3 +1,5 @@
+[English](README.md) | [Português](README.pt.md) | [日本語](README.ja.md) | [Русский](README.ru.md)
+
 # 🌤️ Skyo 
 
 **Skyo** is a clean, modern, and responsive weather application that provides real-time weather conditions and air quality insights for any city worldwide. 
