@@ -4,7 +4,6 @@
 
 ![Skyo Preview](https://github.com/KrishBharadwaj5678/Skyo/raw/main/SkyoDemo.png)
 
-
 ## 🚀 Features
 
 | Feature                 | Description                                   |
@@ -38,33 +37,31 @@
 
 ## ⚙️ Installation & Setup
 
-Follow these steps to run **Skyo** locally:
-
-1. Clone the Repository:
+### 1️⃣ Clone the repository
 
     ```bash
     git clone https://github.com/KrishBharadwaj5678/Skyo.git
     ```
 
-2. Enter the Project Folder
+### 2️⃣ Navigate to project directory
 
     ```bash
     cd Skyo
     ```
 
-3. Install Dependencies
+### 3️⃣ Install dependencies
 
     ```bash
     npm install
     ```
 
-4. Start the Development Server
+### 4️⃣ Start the Development Server
 
     ```bash
     npm run dev
     ```
 
-5. Open the app in your browser.
+### 5️⃣ Open the app in your browser
 
 ## 🔐 Environment Variables
 
@@ -74,16 +71,3 @@ Create a `.env` file in the root directory and add:
 VITE_BASE_URL = "https://api.openweathermap.org/data/2.5"
 VITE_APP_ID = your_api_key_here
 ```
-
----
-
-## Contributing 🤝
-
-Want to contribute? Here's how:
-
-1. 🍴 Fork the repository.
-2. 🌿 Create a new branch (`git checkout -b feature-name`).
-3. ✍️ Make your changes and commit them (`git commit -am 'Add feature-name'`).
-4. 🚀 Push to your branch (`git push origin feature-name`).
-5. 🔄 Submit a pull request to merge into the main branch.
-
