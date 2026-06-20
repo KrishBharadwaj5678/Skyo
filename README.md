@@ -39,27 +39,27 @@
 
 ### 1️⃣ Clone the repository
 
-    ```bash
-    git clone https://github.com/KrishBharadwaj5678/Skyo.git
-    ```
+```bash
+git clone https://github.com/KrishBharadwaj5678/Skyo.git
+```
 
 ### 2️⃣ Navigate to project directory
 
-    ```bash
-    cd Skyo
-    ```
+```bash
+cd Skyo
+```
 
 ### 3️⃣ Install dependencies
 
-    ```bash
-    npm install
-    ```
+```bash
+npm install
+```
 
 ### 4️⃣ Start the Development Server
 
-    ```bash
-    npm run dev
-    ```
+```bash
+npm run dev
+```
 
 ### 5️⃣ Open the app in your browser
 
